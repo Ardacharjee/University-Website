@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="with=device-width, initial-scale=1.0">
+<title>Department of Computer Science and Technology</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?
+family=Poppins:wght@100;200;300;400;600;700&display=swap"
+rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fort
+awesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+
+<script>
+	var path = "wrongchoice.html"
+	 function func(){
+		var e1 = document.getElementById("menu1");
+		var valuecourse = e1.options[e1.selectedIndex].value;    
+		var e2 = document.getElementById("menu2");
+		var valuesem = e2.options[e2.selectedIndex].value; 
+		if (valuecourse == '1')
+					 {
+					  if(valuesem == '1')
+						  path = "mcasemtwo.html";
+					  else if (valuesem == '2') 
+						  path = 'mcasemfour.html';
+					 }
+		else if(valuecourse == '2')
+					 {
+					   if(valuesem == '1')
+						   path = 'mscsemtwo.html';
+					   else if (valuesem == '2')
+						   path = 'mscsemfour.html';
+					  }  
+			  
+		window.location.replace(path);
+	  }        
+		 
+	
+	 </script>
+</head>
+<body>
+	<section class="sub-header">
+	<nav>
+	<a href="index.html"><img src="images/logo.png"></a>
+	<div class="nav-links" id="navLinks">
+		<i class="fa fa-times" onclick="hideMenu()"></i>
+	<ul >
+		<li><a href="index.html">Home</a></li>
+		<li><a href="Faculties.html">Faculties</a></li>
+		<li><a href="Course.html">Courses</a></li>
+		<li><a href="Calender.html">Academic Calender</a></li>
+		<li><a href="Library.html">Library Information</a></li>
+		<li><a href="ContactUs.html">Contact</a></li>
+		<li><a href="About.html">About Us</a></li>
+		<li><a href="Routine.html">Routine</a></li>
+	</ul>
+	</div>
+	<i class="fa fa-bars" onclick="showMenu()"></i>
+	</nav>
+	<h1>Routine</h1>
+	</section>
+
+	<!----------------Routine-------->
+
+	<section class="about-us">
+		
+		<div class="row">
+			<div class="about-col">
+				<div class="form-group">
+					<select class="form control" class="form-control" id="menu1" placeholder="course">
+	   <option> course type </option>
+	   <option value = '1'> MCA </option>
+	   <option value = '2'> MSC </option>
+	   </select>
+				 </div>
+			</div>
+			<div class="form-group">
+				<select class="form-control" id="menu2">
+				   <option>Semester select</option>
+				   <option value = '1'>2</option>
+				   <option value = '2'>4</option>
+				
+				  
+				  
+			   </select>
+  </div>
+	</div>
+		<div class="form-group">
+			<input type="submit" value="submit "onClick="func()" >
+		 </div>
+	</section>
+
+
+<!----------------Footer------->
+
+<section class="footer">
+	<h4>About Us</h4>
+	<p>The faculty of this department has diverse specializations to 
+		cater to the needs of teaching and research and has also been associated
+		 with a large number of universities, institutions and government departments.<br> 
+		 The department has organized national level seminars and workshops and contributed in development of teachers in the field of Commerce and Management by organizing Refresher Courses.</p>
+		 <div class="icons">
+			<i class="fa fa-facebook"></i>
+			<i class="fa fa-twitter"></i>
+			<i class="fa fa-instagram"></i>
+			<i class="fa fa-linkedin"></i>
+		 </div>
+</section>
+
+
+
+
+	<!------------Javascript for Toggle Menu--------->
+<script>
+	var navLinks = document.getElementById("navLinks");
+
+function showMenu(){
+	navLinks.style.right = "0";
+}
+function hideMenu(){
+	navLinks.style.right = "-200px";
+}
+	</script>
+
+
+
+</body>
+</html>
